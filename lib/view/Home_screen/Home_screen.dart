@@ -15,8 +15,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text("Calculator App"),
+        elevation: 3,
+        backgroundColor: Colors.black,
+        title: Text(
+          "Calculator ",
+          style: TextStyle(color: Colors.amber, fontSize: 25),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -32,7 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   controller: firstController,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
-                      hintText: "1st", border: OutlineInputBorder()),
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "1st",
+                      border: OutlineInputBorder()),
                 ),
               ),
             ),
@@ -46,7 +55,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   controller: secondController,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
-                      hintText: "2nd", border: OutlineInputBorder()),
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "2nd",
+                      border: OutlineInputBorder()),
                 ),
               ),
             ),
@@ -97,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               leading: Text(
                 "Result: $result",
-                style: TextStyle(fontSize: 25),
+                style: TextStyle(fontSize: 25, color: Colors.white),
               ),
               // title: Text(result, style: TextStyle(fontSize: 25)),
             )
